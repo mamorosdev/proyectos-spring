@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="radio" class="modelocoche.Radio">
+		<property name="marca" value="Sony"></property>
+		<property name="modelo" value="XTR"></property>
+	</bean>
+	
+	<bean id="motorDiesel" class="modelocoche.MotorDiesel">
+		<property name="marcaFiltro" value="XD"></property>
+	</bean>
+	
+	<bean id="coche" class="modelocoche.Coche">
+		<constructor-arg name="motor" ref="motorDiesel"></constructor-arg>
+		<constructor-arg name="radio" ref="radio"></constructor-arg>
+	</bean>
+	
+</beans>
