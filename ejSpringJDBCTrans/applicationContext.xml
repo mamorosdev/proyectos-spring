@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="jdbc.properties" />
+	</bean>
+
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="url" value="${database.url}"></property>
+		<property name="username" value="${database.user}"></property>
+		<property name="password" value="${database.password}"></property>
+		<property name="driverClassName" value="${database.driver}"></property>
+	</bean>
+	
+	<bean id="txTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="ds"/>
+	</bean>
+	
+	<bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="txTransactionManager"/>
+	</bean>
+
+	<bean class="modelo.dao.TrabajadorDAO2" id="trabajadorDAO2">
+		<property name="dataSource" ref="ds" />
+	</bean>
+
+	<bean class="servicios.TrabajadorServices" id="trabajadorServices">
+		<constructor-arg name="dao" ref="trabajadorDAO2"/>
+		<constructor-arg name="txTemplate" ref="transactionTemplate"/>
+	</bean>
+	
+</beans>
