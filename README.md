@@ -9,12 +9,11 @@ Para que esta mágia sea posible los beans se definen en un archivo XML.
 
 Hay 3 clases Java con los ejemplos de prueba.
 
+
 Proyectos pendientes
 --------------------
-AOP
-JDBC
-Transacciones
-MVC
-Security
-REST-WS
+Cuando pueda voy a subir los ejemplos
+Además, más adelante veo muy útil subir ejemplos de los siguientes mósulos de Spring: 
+AOP MVC Security REST-WS
+
 
