@@ -14,6 +14,7 @@ EjSpringJDBC
 En este ejemplo probamos operaciones CRUD en una tabla de una base de datos MySQL con Spring JDBC; una forma más artesanal 
 de mapear una BBDD relaciona con las clases Java que Hibernate o IBatis; pero más elegante que JDBC a pelo.
 Gracias el patrón Template Spring también aporta implementaciones para mapear datos en JPA, Hibernate, IBatis, ficheros XML, LDAP, bases de datos Nosql ...
+El script de la base de datos que he usado en este ejemplo y el siguiente lo puedes [obtener aquí](https://github.com/mamorosdev/ejemplos-sql/blob/master/ejemplos_springjdbc.sql).
 
 EjSpringJDBCTrans
 ------------------
