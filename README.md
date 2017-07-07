@@ -1,13 +1,16 @@
-# proyectos-spring
-Proyectos que muestran el funcionamiento y las posibilidades de Spring Framework.
+# spring3-EJEMPLOS
+Proyectos que muestran el funcionamiento y las posibilidades de Spring Framework 3; me sirvieron para aprender Spring 3 en 2012.
+Ahora mismo estan todos obsoletos. Hasta nuevo aviso no preveo actualizar este repositorio.
 
 #### Entorno: 
-Spring Framework 3.1
-Java SE 7.
+
+* Spring Framework 3.1
+* Java SE 7.
 
 #### Pendiente
-Usar Maven para facilitar instalación.
-Ejemplos de otros módulos: AOP,MVC,Security,REST-WS,Data.
+* Usar Spring Boot.
+* Usar Maven para facilitar instalación.
+* Ejemplos de otros módulos: AOP,MVC,Security,REST-WS,Data.
 
 
 EjSpringCore
